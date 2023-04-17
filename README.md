@@ -61,7 +61,7 @@ In template:
 In component:
 
     import { Component } from '@angular/core';
-    import { IParallaxScrollConfig } from 'ngx-parallax-scroll';
+    import { IParallaxScrollConfig } from '@liyuanlin/ngx-parallax-scroll';
 
     @Component({
       ...
