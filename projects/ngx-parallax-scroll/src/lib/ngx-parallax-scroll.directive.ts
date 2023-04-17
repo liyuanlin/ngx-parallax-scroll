@@ -22,13 +22,13 @@ import { IParallaxScrollConfig, ParallaxDirection } from './ngx-parallax.interfa
 })
 export class ParallaxScrollDirective implements OnInit, OnChanges, AfterViewInit, OnDestroy {
   // Required input from config object or input props
-  @Input() private config?: IParallaxScrollConfig;
+  @Input() config?: IParallaxScrollConfig;
 
   @Input()
-  parallaxSpeed: number;
+  parallaxSpeed: number = 1;
 
   @Input()
-  parallaxSmoothness: number;
+  parallaxSmoothness: number = 1;
 
   @Input()
   parallaxDirection?: ParallaxDirection;
@@ -40,20 +40,20 @@ export class ParallaxScrollDirective implements OnInit, OnChanges, AfterViewInit
   parallaxThrottleTime?: number;
 
   // Setting the values after validation
-  private _parallaxSpeedVal: number;
-  private _parallaxSmoothnessVal: number;
+  private _parallaxSpeedVal: number = 1;
+  private _parallaxSmoothnessVal: number = 1;
   private _parallaxTimingFunVal: string = 'linear';
   private _parallaxThrottleTime: number = 0;
 
-  scrollSubscribtion: Subscription;
-  isPrxElInViewport: boolean;
+  scrollSubscribtion?: Subscription;
+  isPrxElInViewport: boolean = false;
   directiveName: string = this.constructor.name;
 
   constructor(
     public elem: ElementRef,
     public renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) { }
 
   ngOnInit() {
     if (isPlatformServer(this.platformId)) return;
@@ -93,7 +93,7 @@ export class ParallaxScrollDirective implements OnInit, OnChanges, AfterViewInit
     this.setParallaxThrottleTime(prlxThrottleTime);
   }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() { }
 
   ngOnDestroy() {
     this.scrollSubscribtion && this.scrollSubscribtion.unsubscribe();
@@ -193,8 +193,7 @@ export class ParallaxScrollDirective implements OnInit, OnChanges, AfterViewInit
     const isRequiredType = typeof value === requiredType;
     if (!isRequiredType && isDevMode()) {
       throw new Error(
-        `${
-          this.directiveName
+        `${this.directiveName
         }: @Input [${propName}] is expected to be of type '${requiredType}', but type '${typeof value}' was provided`
       );
     }
@@ -207,8 +206,7 @@ export class ParallaxScrollDirective implements OnInit, OnChanges, AfterViewInit
 
     if (isRequiredType && !isValid && isDevMode()) {
       throw new Error(
-        `${
-          this.directiveName
+        `${this.directiveName
         }: @Input [${propName}] is expected to be positive value, but negative '${value}' value was provided`
       );
     }

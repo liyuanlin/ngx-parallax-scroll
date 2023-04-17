@@ -8,16 +8,17 @@ import { IParallaxScrollConfig } from './ngx-parallax.interfaces';
       <ng-content></ng-content>
     </div>
   `,
-  styles: [
-    `
-      .parallax-container display: inline-block;
-    `
-  ]
+  styles: ['.parallax-container{display:inline-block;}']
 })
 export class NgxParallaxScrollComponent implements OnInit {
-  @Input() config: IParallaxScrollConfig;
+  @Input() config: IParallaxScrollConfig = {
+    // Set parallax speed, requared
+    parallaxSpeed: 10,
+    // Set parallax smoothness (transition time), requared
+    parallaxSmoothness: 1000
+  };
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
