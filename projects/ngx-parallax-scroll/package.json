@@ -1,5 +1,5 @@
 {
-  "name": "@username/ngx-parallax-scroll",
+  "name": "@liyuanlin/ngx-parallax-scroll",
   "version": "1.0.2",
   "description": "This is a simple angular plugin, that allows us to implement parallax effect for some element in page",
   "keywords": [
@@ -11,17 +11,17 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Alexander Kislov",
-      "email": "alexander-kislov@hotmail.com",
-      "url": "https://github.com/farengeyt451"
+      "name": "Larry Yuanlin Li",
+      "email": "liyuanlin138@gmail.com",
+      "url": "https://github.com/liyuanlin"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/farengeyt451/ngx-parallax-scroll"
+    "url": "git+https://github.com/liyuanlin/ngx-parallax-scroll"
   },
   "bugs": {
-    "url": "https://github.com/farengeyt451/ngx-parallax-scroll/issues"
+    "url": "https://github.com/liyuanlin/ngx-parallax-scroll/issues"
   },
   "peerDependencies": {
     "@angular/common": "^14.0.2",

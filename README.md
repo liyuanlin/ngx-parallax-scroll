@@ -1,3 +1,9 @@
+# source
+ fork from  [https://github.com/farengeyt451/ngx-parallax-scroll](https://github.com/farengeyt451/ngx-parallax-scroll)
+# update after fork
+ 
+ update to fit angular 14+
+
 # ngx-parallaxs-scroll
 
 This is a simple angular plugin, that allows us to implement parallax effect for some element in page.
@@ -8,17 +14,26 @@ Example application: [https://ngx-parallax-scroll.stackblitz.io](https://ngx-par
 <br/>
 StackBlitz example: [https://stackblitz.com/edit/ngx-parallax-scroll](https://stackblitz.com/edit/ngx-parallax-scroll)
 
+
+or  you can download code from [https://github.com/liyuanlin/ngx-parallax-scroll](https://github.com/liyuanlin/ngx-parallax-scroll)
+
+run command 
+```
+npm i
+npm start
+```
+then open [http://localhost:4200](http://localhost:4200) to view this demo 
 ## Installation
 
 Install from npm:
 
-`npm i ngx-parallax-scroll --save`
+`npm i @liyuanlin/ngx-parallax-scroll --save`
 
 ## Importing
 
 Reference the directive in the main module:
 
-`import { NgxParallaxScrollModule } from 'ngx-parallax-scroll';`
+`import { NgxParallaxScrollModule } from '@liyuanlin/ngx-parallax-scroll';`
 
 Then in your base module:
 
