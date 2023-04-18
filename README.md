@@ -20,6 +20,7 @@ or  you can download code from [https://github.com/liyuanlin/ngx-parallax-scroll
 run command 
 ```
 npm i
+npmn run build-lib
 npm start
 ```
 then open [http://localhost:4200](http://localhost:4200) to view this demo 
